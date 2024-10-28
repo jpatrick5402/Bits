@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <wchar.h>
+#include <locale.h>
 
 void print_help() {
     printf("Usage: bits <FILEPATH> [-r,-v,-h]\n");
@@ -22,6 +24,7 @@ void print_raw(FILE * file_pointer) {
 void print_verbose(FILE * file_pointer) {
     int byteCount = 0;
     unsigned char byte;
+    setlocale(LC_CTYPE, "");
     while (fread(&byte, sizeof(byte), 1, file_pointer) == 1)
     {
         printf("Byte #: %-10d ", byteCount); // Index of Byte
@@ -41,14 +44,14 @@ void print_verbose(FILE * file_pointer) {
             printf(" \\r       ");
         else if (byte == ' ')
             printf(" [space] ");
-        else
-            printf(" %c       ", byte); // Print ASCII Value
-
+        else {
+            wchar_t unicode_char = byte;
+            printf(" %lc       ", unicode_char); // Print Unicode Value
+        }
         printf("\n");
 
         byteCount = byteCount + 1;
     }
-    printf("\n");
     fclose(file_pointer);
 }
 
@@ -64,7 +67,6 @@ int main(int argc, char *argv[])
     fptr = fopen(argv[1], "rb");
 
     if (argc < 3) {
-        printf("Test");
         print_verbose(fptr);
     } else if (strcmp(argv[2], "-h") == 0) {
         print_help();
