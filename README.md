@@ -1,5 +1,5 @@
 # Bits
-_View binary data in your terminal_
+_View hex, binary, ASCII data in your terminal_
 
 ## Installation
 
