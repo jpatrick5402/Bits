@@ -68,14 +68,17 @@ int main(int argc, char *argv[])
         fptr = fopen(argv[1], "rb");
     }
 
-    if (strcmp(argv[2], "-h") == 0) {
+    if (argc < 3) {
+        printf("Test");
+        print_verbose(fptr);
+    } else if (strcmp(argv[2], "-h") == 0) {
         print_help();
     } else if (strcmp(argv[2], "-r") == 0) {
         print_raw(fptr);
     } else if (strcmp(argv[2], "-v") == 0) {
         print_verbose(fptr);
     } else {
-        printf("argument not recognized: %s\n", argv[2]);
+        printf("flag not recognized: %s\n", argv[2]);
     }
 
     return 0;

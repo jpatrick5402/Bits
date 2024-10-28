@@ -1,3 +1,3 @@
 #1/bin/bash
 make
-cp bits /usr/local/bin/
+sudo cp bits /usr/local/bin/
