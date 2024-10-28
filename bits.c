@@ -3,7 +3,7 @@
 #include <string.h>
 
 void print_help() {
-    printf("bits <FILEPATH> [-r,-v,-h]\n");
+    printf("Usage: bits <FILEPATH> [-r,-v,-h]\n");
 }
 
 void print_raw(FILE * file_pointer) {
@@ -56,14 +56,13 @@ void print_verbose(FILE * file_pointer) {
 int main(int argc, char *argv[])
 {
     FILE *fptr;
-    if (!argv[1]) {
-        printf("Enter file path to read: ");
-        char answer[1000];
-        scanf("%s", answer);
-        fptr = fopen(answer, "rb");
-    } else {
-        fptr = fopen(argv[1], "rb");
+
+    if (argc == 1) {
+        print_help();
+        return -1;
     }
+
+    fptr = fopen(argv[1], "rb");
 
     if (argc < 3) {
         printf("Test");
