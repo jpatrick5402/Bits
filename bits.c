@@ -44,8 +44,7 @@ void print_verbose(FILE * file_pointer) {
         else
             printf(" %c       ", byte); // Print ASCII Value
 
-        if ((byteCount + 1) % 5 == 0)
-            printf("\n");
+        printf("\n");
 
         byteCount = byteCount + 1;
     }
