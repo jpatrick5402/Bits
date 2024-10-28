@@ -1,5 +1,5 @@
 # Bits
-_An easy way to view the low level data of files in your linux terminal_
+_View binary data in your terminal_
 
 ## Installation
 
