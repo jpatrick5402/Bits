@@ -8,6 +8,8 @@ Run each of these commands in your linux terminal and you will have an executabl
 git clone https://github.com/jpatrick5402/Bits.git
 cd Bits/
 make
+chmod +x add_to_bin.sh
+sudo ./add_to_bin.sh
 ```
 ## Usage
 
