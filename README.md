@@ -10,4 +10,4 @@ Run each of these commands in your linux terminal and you will have an executabl
 
 ## Usage
 
-`./bits <FILEPATH>`
+`./bits <FILEPATH> [-r,-v,-h]`
