@@ -56,15 +56,12 @@ void print_verbose(FILE * file_pointer) {
 int main(int argc, char *argv[])
 {
     FILE *fptr;
-    if (!argv[1])
-    {
+    if (!argv[1]) {
         printf("Enter file path to read: ");
         char answer[1000];
         scanf("%s", answer);
         fptr = fopen(answer, "rb");
-    }
-    else
-    {
+    } else {
         fptr = fopen(argv[1], "rb");
     }
 
