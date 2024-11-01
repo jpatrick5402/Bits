@@ -5,7 +5,7 @@
 #include <locale.h>
 
 void print_help() {
-    printf("Usage: bits <FILEPATH> [-r,-v,-h]\n");
+    printf("Usage: bits FILEPATH [-r,-v,-h]\n");
 }
 
 void print_raw(FILE * file_pointer) {

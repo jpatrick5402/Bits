@@ -3,7 +3,7 @@ _View hex, binary, ASCII data in your terminal_
 
 ## Installation
 
-Run each of these commands in your linux terminal and you will have an executable "bits" program <br>
+Run each of these commands in your Linux terminal and you will have an executable "bits" program <br>
 ```
 git clone https://github.com/jpatrick5402/Bits.git
 cd Bits/
@@ -13,4 +13,4 @@ sudo ./add_to_bin.sh
 ```
 ## Usage
 
-`./bits <FILEPATH> [-r,-v,-h]`
+`./bits FILEPATH [-r,-v,-h]`
